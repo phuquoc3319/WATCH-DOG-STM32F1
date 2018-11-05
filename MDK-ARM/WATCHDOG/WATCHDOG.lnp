@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"watchdog\startup_stm32f103xb.o"
+"watchdog\main.o"
+"watchdog\stm32f1xx_it.o"
+"watchdog\stm32f1xx_hal_msp.o"
+"watchdog\stm32f1xx_hal_gpio_ex.o"
+"watchdog\stm32f1xx_hal_iwdg.o"
+"watchdog\stm32f1xx_hal_tim.o"
+"watchdog\stm32f1xx_hal_tim_ex.o"
+"watchdog\stm32f1xx_hal.o"
+"watchdog\stm32f1xx_hal_rcc.o"
+"watchdog\stm32f1xx_hal_rcc_ex.o"
+"watchdog\stm32f1xx_hal_gpio.o"
+"watchdog\stm32f1xx_hal_dma.o"
+"watchdog\stm32f1xx_hal_cortex.o"
+"watchdog\stm32f1xx_hal_pwr.o"
+"watchdog\stm32f1xx_hal_flash.o"
+"watchdog\stm32f1xx_hal_flash_ex.o"
+"watchdog\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "WATCHDOG\WATCHDOG.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "WATCHDOG.map" -o WATCHDOG\WATCHDOG.axf
